@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 62.5%;
+}
+
+:root {
+    --linear: linear-gradient(to right, rgb(128, 47, 209), rgb(81, 124, 223));
+}
+
+.main {
+    width: 100%;
+    background-color: rgb(13, 21, 44);
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    color: white;
+    padding: 1.5rem 3.5rem;
+    margin: 0px 4vw;
+}
+
+.navbar .left {
+    width: 30%;
+    /* Adjust as needed */
+    font-weight: 800;
+}
+
+.mid {
+    width: 50%;
+    /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-weight: 500;
+}
+
+.mid i {
+    font-size: 2rem;
+}
+
+.mid li {
+    margin-right: 2.8rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1vw;
+}
+
+.mid li:hover {
+    color: purple;
+    transition: all 0.3s ease-in-out;
+}
+
+.left h1:hover {
+    background: var(--linear);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+}
+
+.left h1::before {
+    width: 0%;
+    height: 7%;
+    background: var(--linear);
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.left h1:hover::before {
+    width: 65%;
+}
+
+.mid a {
+    text-decoration: none;
+}
+
+.navbar .right,
+.contact-us .right {
+    width: 30%;
+    /* Adjust as needed */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar .right .icon,
+.contact-us .right .icon {
+    margin: 0px 0.5rem;
+    padding: 0px 0.5rem;
+    cursor: pointer;
+    font-size: 2.4rem;
+}
+
+.navbar .right .icon i:hover,
+.contact-us .right .icon i:hover {
+    background: var(--linear);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar .right .icon i,
+.contact-us .right .icon i {
+    color: white;
+}
+
+.navbar .left h1 {
+    font-size: 5rem;
+    position: relative;
+}
+
+.bottom-container {
+    min-height: 90vh;
+    max-width: 100%;
+    display: flex;
+    color: white;
+    /* padding: 0px 1rem; */
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+
+.img {
+    width: 31.5rem;
+    height: 31.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.linear-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    background-image: var(--linear);
+    position: relative;
+    z-index: 2;
+}
+
+.container .linear-box img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.bottom-container .container h2 {
+    line-height: 11rem;
+    font-size: 7rem;
+    background: var(--linear);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 10;
+}
+
+.bottom-container .container h3 {
+    line-height: 11rem;
+    font-size: 7rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* .container {
+    border: 2px solid red;
+    margin-left: 7rem;
+} */
+
+.bottom-container .right {
+    width: 35%;
+    margin-left: 3.8rem;
+    margin-right: 1rem;
+    /* border: 2px solid red; */
+}
+
+.bottom-container .left {
+    width: 50%;
+}
+
+.bottom-container .container {
+    position: relative;
+}
+
+.text-details {
+    /* border: 2px solid green; */
+    width: 65%;
+    line-height: 2.5rem;
+    font-size: 2rem;
+}
+
+.simple-circle {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    background: var(--linear);
+    z-index: 1;
+}
+
+.big-circle {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 80%;
+    bottom: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--linear)
+}
+
+.transparent-circle {
+    background-color: transparent;
+    color: transparent;
+    width: 29.7rem;
+    height: 29.7rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(13, 21, 44);
+}
+
+.btn {
+    /* display: inline-block; */
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 2rem;
+    /* Adjust this to make the button more or less rounded */
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 4.5rem;
+    background: var(--linear);
+    color: white;
+}
+
+.second-page,
+.third-page,
+.fouth-page,
+.about-me {
+    min-height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.second-page .project-box {
+    width: 57%;
+    min-height: 100vh;
+    margin: auto;
+    /* border: 4px solid green; */
+}
+
+.second-page .project-box h3,
+.third-page .outer-div h3,
+.more-skill h3,
+.about-me h3 {
+    font-size: 5rem;
+    margin: 2.8vw 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-gap: 4rem 4rem;
+    /* padding: 0px 0.5vw; */
+    /* border: 2px solid yellow; */
+    /* height: 92%; */
+}
+
+.grid-item {
+    padding: 2.5rem;
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.item-content {
+    height: 18rem;
+    width: 100%;
+    object-fit: fill;
+    border: 1px solid whitesmoke;
+    position: relative;
+}
+
+.item-content::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: "Visit";
+    color: white;
+    font-size: 3rem;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+}
+
+.item-content:hover::before {
+    opacity: 0.8;
+}
+
+.grid-item .item-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item .project-btn {
+    /* display: inline-block; */
+    padding: 1.7rem 3.2rem;
+    border: none;
+    border-radius: 2rem;
+    /* Adjust this to make the button more or less rounded */
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2.8rem;
+    margin-right: 2rem;
+    background: var(--linear);
+    color: white;
+}
+
+.grid-item h4 {
+    font-size: 3rem;
+    margin: 1vw 0px;
+}
+
+.third-page .outer-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid green; */
+    width: 100%;
+}
+
+.third-page .outer-div .inner-div {
+    width: 80%;
+    /* adjust width as needed */
+    height: 1.4rem;
+    background: var(--linear);
+    /* adjust height as needed */
+    margin: 1.8rem 0px;
+    /* border: 3px solid green; */
+    border-radius: 1rem;
+    display: flex;
+}
+
+.third-page .outer-div .inner-div p {
+    margin: 0;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.techno {
+    /* border: 2px solid red; */
+    width: 55%;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 1.4rem 0rem;
+}
+
+.techno-group h4 {
+    font-size: 2.5rem;
+}
+
+.second-techno-group {
+    /* border: 2px solid rgb(0, 89, 255); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.third-page .outer-div .four .inner-div {
+    width: 50%;
+}
+
+.third-page .outer-div .five .inner-div,
+.outer-div .six .inner-div,
+.outer-div .seven .inner-div {
+    width: 35%;
+}
+
+.more-skill {
+    /* border: 2px solid red; */
+    width: 57%;
+    margin: auto;
+}
+
+.skill {
+    /* border: 2px solid yellow; */
+    padding: 1.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.add-skill {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skill .dot-circle {
+    height: 2.2rem;
+    width: 2.2rem;
+    background: var(--linear);
+    border-radius: 50%;
+    margin-right: 1.2rem;
+}
+
+.more-about-me {
+    /* border: 2px solid gainsboro; */
+    width: 57%;
+    margin: auto;
+}
+
+.year {
+    display: flex;
+    width: 100%;
+    /* border: 2px solid yellow; */
+}
+
+.box {
+    /* border: 2px solid rgb(0, 255, 98); */
+    width: 100%;
+    margin-right: 3rem;
+    line-height: 1.4rem;
+}
+
+.year .box #time {
+    font-size: 2.4rem;
+}
+
+.my-details .details p,.text-div p,.grid-item p {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.doted-line {
+    display: flex;
+}
+
+.white-dot-box {
+    /* border: 2px solid red; */
+    padding: 1rem 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.white-dot {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--linear);
+}
+
+.line {
+    width: 100%;
+    height: 0.6rem;
+    background-color: whitesmoke;
+}
+
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0px;
+    width: 100%;
+    /* border: 2px solid green; */
+    margin-top: 2.8rem;
+}
+
+.add-skill .skill p {
+    font-size: 2rem;
+}
+
+.grouping {
+    width: 80%;
+}
+
+@media (max-width: 1200px){
+    .main{
+        width:100%
+    }
+
+    html,body {
+        font-size: 50.5%;
+    }
+    
+    .navbar li {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 800px){
+    .main{
+        width:100%
+    }
+
+    html,body {
+        font-size: 45.5%;
+    }
+
+    .navbar li {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 650px){
+    .main{
+        width:100%
+    }
+
+    html,body {
+        font-size: 35.5%;
+    }
+
+    .mid li {
+        display: none;
+    }
+    .mid {
+        justify-content: end;
+    }
+}
+
+
+
+
